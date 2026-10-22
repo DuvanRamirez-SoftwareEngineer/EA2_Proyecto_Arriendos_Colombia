@@ -1,0 +1,51 @@
+RESUMEN DEL DATAFRAME
+======================================================================
+Identificador del dataset: aptologia/precios-arriendo-colombia
+Configuración: precios_arriendo_barrios
+Split: train
+Método de carga: Hugging Face Datasets: load_dataset
+Muestra: no se seleccionó una muestra; se utilizó el split completo cargado.
+Unidad de análisis: registro agregado por ciudad y barrio en la fotografía disponible.
+Fecha de generación del resumen: 2026-10-22 20:08:10
+
+Cantidad de filas: 1460
+Cantidad de columnas: 10
+
+NOMBRES Y TIPOS DE COLUMNAS
+----------------------------------------------------------------------
+- fecha: str
+- ciudad_id: str
+- ciudad: str
+- barrio: str
+- avisos: int64
+- p25: int64
+- mediana: int64
+- p75: int64
+- con_parqueadero: int64
+- con_telefono: int64
+
+VALORES NULOS POR COLUMNA
+----------------------------------------------------------------------
+- fecha: 0
+- ciudad_id: 0
+- ciudad: 0
+- barrio: 0
+- avisos: 0
+- p25: 0
+- mediana: 0
+- p75: 0
+- con_parqueadero: 0
+- con_telefono: 0
+
+PRIMEROS CINCO REGISTROS (REFERENCIA)
+----------------------------------------------------------------------
+     fecha ciudad_id   ciudad     barrio  avisos     p25  mediana      p75  con_parqueadero  con_telefono
+2026-10-05  medellin Medellín El Poblado   17124 4400000  5700000  7700000            15907          6599
+2026-10-05  medellin Medellín    Poblado    7593 4100000  5650000  8000000             6509           841
+2026-10-05  medellin Medellín   Laureles    5780 3300000  4200000  5300000             4283          2169
+2026-10-05  medellin Medellín  Castropol    2730 4200000  5350000  7000000             2286          1547
+2026-10-05  medellin Medellín  El Tesoro    2471 5800000  7700000 11500000             2167          1278
+
+Nota: el resumen describe el DataFrame cargado. La ficha del dataset debe consultarse para conocer metodología, licencia y fecha de la fotografía.
+Fuente: https://huggingface.co/datasets/aptologia/precios-arriendo-colombia
+Fuente original declarada: Aptología, https://www.aptologia.com/datos-abiertos
