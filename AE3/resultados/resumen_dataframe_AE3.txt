@@ -1,0 +1,72 @@
+RESUMEN DEL DATAFRAME TRANSFORMADO Y ENRIQUECIDO – AE3
+==============================================================================
+Dataset: aptologia/precios-arriendo-colombia
+Configuración: precios_arriendo_barrios
+Split: train
+Fecha de generación: 2026-11-05 18:17:29
+Unidad de análisis: registro agregado por ciudad y barrio.
+
+Filas: 1460
+Columnas: 16
+
+COLUMNAS Y TIPOS
+- fecha: datetime64[ns]
+- ciudad_id: string
+- ciudad: string
+- barrio: string
+- avisos: int64
+- p25: int64
+- mediana: int64
+- p75: int64
+- con_parqueadero: int64
+- con_telefono: int64
+- ciudad_normalizada: string
+- barrio_normalizado: string
+- rango_intercuartil: int64
+- rango_intercuartil_pct_mediana: float64
+- participacion_avisos_parqueadero: float64
+- participacion_avisos_telefono: float64
+
+VALORES NULOS POR COLUMNA
+- fecha: 0
+- ciudad_id: 0
+- ciudad: 0
+- barrio: 0
+- avisos: 0
+- p25: 0
+- mediana: 0
+- p75: 0
+- con_parqueadero: 0
+- con_telefono: 0
+- ciudad_normalizada: 0
+- barrio_normalizado: 0
+- rango_intercuartil: 0
+- rango_intercuartil_pct_mediana: 0
+- participacion_avisos_parqueadero: 0
+- participacion_avisos_telefono: 0
+
+ESTADÍSTICAS DESCRIPTIVAS (VARIABLES NUMÉRICAS)
+         avisos          p25      mediana          p75  con_parqueadero  con_telefono  rango_intercuartil  rango_intercuartil_pct_mediana  participacion_avisos_parqueadero  participacion_avisos_telefono
+count   1460.00      1460.00      1460.00      1460.00          1460.00       1460.00             1460.00                         1460.00                           1460.00                        1460.00
+mean     147.71   2444033.58   3084562.64   4002385.28            98.79         52.42          1558351.70                           44.64                             58.17                          35.65
+std      595.18   1656496.99   2281844.51   3211595.23           497.10        213.10          1889552.56                           32.93                             28.80                          27.51
+min       15.00    400000.00    400000.00    400000.00             0.00          0.00                0.00                            0.00                              0.00                           0.00
+25%       23.00   1400000.00   1600000.00   1950000.00            10.00          4.00           457536.25                           24.10                             35.29                          13.49
+50%       40.00   1962500.00   2500000.00   3000000.00            22.00         13.00           944000.00                           37.82                             61.55                          31.40
+75%      103.25   2953125.00   3700000.00   4700000.00            66.00         37.25          1800000.00                           57.09                             83.22                          51.10
+max    17124.00  17000000.00  20500000.00  25000000.00         15907.00       6599.00         17050000.00                          469.70                            100.00                         100.00
+
+VALIDACIONES
+- Filas originales: 1460
+- Filas finales: 1460
+- Duplicados exactos finales: 0
+- Registros con regla de consistencia incumplida: 0
+
+INDICADORES DERIVADOS
+- rango_intercuartil = p75 - p25 (COP/mes)
+- rango_intercuartil_pct_mediana = (p75 - p25) / mediana * 100
+- participacion_avisos_parqueadero = con_parqueadero / avisos * 100
+- participacion_avisos_telefono = con_telefono / avisos * 100
+
+Fuente: https://huggingface.co/datasets/aptologia/precios-arriendo-colombia
+Los precios son precios pedidos publicados, no necesariamente precios finales pactados.
